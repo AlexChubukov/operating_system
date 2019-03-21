@@ -1,0 +1,9 @@
+T1=2.3;
+T=0.5;
+k=1; 
+B=[k];
+A=[T*T1, T+T1, 1, k];
+W=tf(B,A)
+Ts=0.5; % период дискретизации сигнала (Sample Time)
+Wd1=c2d(W, Ts, 'zoh')
+Wd2=c2d(W, Ts, 'tustin')
